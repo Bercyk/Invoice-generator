@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <title>Invoice generator</title>
+    <link rel="stylesheet" href="style/dark-theme.css" id="theme-link">
+</head>
+<body>
+    <div class="container">
+        <div class="light-on-dark">
+            <label class="switch">
+                <input id="light-mode-el" type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="header-flexbox"> 
+            <h1 class="header-title">Invoice creator</h1>
+            <p class="header-paragraph">Thanks for choosing Bercyk, LLC!</p>
+        </div>
+        <div class="content-main">
+            <div class="button-flexbox">
+                <button class="btn-service" id="wash-car-btn">Wash Car: $10</button>
+                <button class="btn-service" id="mow-lawn-btn">Mow Lawn: $20</button>
+                <button class="btn-service" id="pull-weeds-btn">Pull Weeds: $30</button>
+            </div>
+            <div class="tasks-flexbox">
+                <div class="main-column">
+                    <span class="text">TASK</span>
+                    <div class="tasks-list" id="task-list-el">
+                    </div>
+                </div>
+                <div class="side-column">
+                    <span class="text">TOTAL</span>
+                    <div class="tasks-price" id="task-price-el">
+                    </div>
+                </div>
+            </div>
+            <hr class="summary-wrapper">
+            <div class="summary-flexbox">
+                <div class="main-column">
+                    <span class="text">NOTES</span>
+                    <span class="text details">We accept cash, credit card, or PayPal</span>
+                </div>
+                <div class="side-column">
+                    <span class="text">TOTAL AMOUNT</span>
+                    <span id="total-amount-el">$0</span>
+                </div>
+            </div>
+            <button class="btn-sender" id="send-btn" id="btn-sender"><img class="icon" src="img/mail_icon.png" alt="icon of mail">Send invoice</button>
+
+        </div>
+    </div>
+</body>
+<script src="script/index.js"></script>
+</html>
